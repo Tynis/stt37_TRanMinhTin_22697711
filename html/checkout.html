@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNISSHOES.VN - Thanh Toán</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar fixed-top" style="background-color: #fff; border-bottom: 1px solid #ddd;">
+            <div class="container-fluid d-flex align-items-center justify-content-between py-1">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="goToHome(); return false;">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="../img/logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
+                            <span>TYNISSHOES.VN</span>
+                        </div>
+                    </div>
+                </a>
+                <form class="d-flex" id="searchForm" style="width: 35%;">
+                    <input class="form-control me-1" type="search" id="searchInput" placeholder="Mời gõ từ tìm..." aria-label="Search" style="border: 1px solid #ccc; font-size: 14px; height: 34px;">
+                    <button class="btn btn-outline-success" type="submit" style="font-size: 14px; padding: 4px 10px;">Tìm</button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-2">
+                        <i class="bi bi-headset me-1" style="font-size: 14px;"></i>
+                        <span style="font-size: 14px;">Hotline: 0123 654 789</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-secondary position-relative me-2" id="openCartBtn" style="padding: 4px 8px;">
+                        <i class="bi bi-cart" style="font-size: 14px;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount" style="font-size: 10px;">
+                                0
+                            </span>
+                    </a>
+                    <a href="login.html" class="nav-link" id="loginLink" style="font-size: 14px; padding: 0.25rem 0.5rem;">ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #212529;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" onclick="goToHome(); return false;">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="NIKE" href="#">NIKE</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="ADIDAS" href="#">ADIDAS</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="JORDAN" href="#">JORDAN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="YEEZY" href="#">YEEZY</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="GIÀY TENNIS/PICKLEBALL" href="#">SPORT</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="TENNIS" href="#">TENNIS</a></li>
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="PICKLEBALL" href="#">PICKLEBALL</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="OTHER BRAND" href="#">OTHER BRAND</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white" href="#">HƯỚNG DẪN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link" href="size-guide.html">Hướng dẫn chọn size giày</a></li>
+                                <li><a class="nav-link" href="warranty-policy.html">Chính sách bảo hành</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container my-5" style="min-height: 90vh;">
+        <h2 class="text-center mb-4">Thanh Toán</h2>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Thông tin sản phẩm</h5>
+                    </div>
+                    <div class="card-body" id="paymentProductInfo">
+                        <!-- Thông tin sản phẩm sẽ được hiển thị ở đây -->
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Thông tin thanh toán</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <label for="customerName" class="form-label">Tên khách hàng</label>
+                            <input type="text" id="customerName" class="form-control" placeholder="Nhập tên khách hàng">
+                        </div>
+                        <!-- Add validation feedback for the phone number field -->
+                        <div class="mb-3">
+                            <label for="customerPhone" class="form-label">Số điện thoại</label>
+                            <input type="text" id="customerPhone" class="form-control" placeholder="Nhập số điện thoại">
+                            <div class="invalid-feedback" id="phoneError">
+                                Vui lòng nhập số điện thoại hợp lệ (10-11 chữ số).
+                            </div>
+                            <small class="form-text text-muted">Số điện thoại phải có 10-11 chữ số.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Phương Thức Thanh Toán</label>
+                            <select id="paymentMethod" class="form-select" onchange="toggleQRCode()">
+                                <option value="cash">Tiền mặt</option>
+                                <option value="transfer">Chuyển khoản</option>
+                            </select>
+                        </div>
+                        <div id="qrCodeSection" style="display:none;">
+                            <p>Quét QR code để thanh toán:</p>
+                            <img src="../img/QR.jpg" alt="QR Code" class="img-fluid">
+                        </div>
+                        <button class="btn btn-primary mt-3" onclick="hienHoaDon()">Thanh Toán</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5>Tóm tắt đơn hàng</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="orderSummary">
+                            <!-- Tóm tắt đơn hàng sẽ được hiển thị ở đây -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal hóa đơn -->
+    <div class="modal fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Hóa đơn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+                </div>
+                <div class="modal-body" id="invoiceContent"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="confirmInvoiceBtn">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 TYNISSHOES.VN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLoginStatus();
+            updateCartCount();
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const source = urlParams.get('source');
+
+            // Auto-fill customer name if logged in - Make sure this runs first
+            const loggedInUser = sessionStorage.getItem('username') || localStorage.getItem('username');
+            if (loggedInUser) {
+                const customerNameField = document.getElementById('customerName');
+                if (customerNameField) {
+                    customerNameField.value = loggedInUser;
+                }
+            }
+
+            if (source === 'cart') {
+                // Get the latest cart data
+                cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+                let groupedCart = {};
+                cart.forEach(item => {
+                    groupedCart[item] = (groupedCart[item] || 0) + 1;
+                });
+
+                let productInfoHtml = '';
+                let orderSummaryHtml = '';
+                let total = 0;
+
+                for (let name in groupedCart) {
+                    let quantity = groupedCart[name];
+                    let product = productsData.find(p => p.name === name);
+                    if (product) {
+                        const itemTotal = product.price * quantity;
+                        total += itemTotal;
+
+                        productInfoHtml += `
+                <div class="mb-3 border p-2">
+                    <div class="d-flex align-items-center">
+                    <img src="${product.src}" alt="${product.name}" style="width:50px; height:50px; object-fit:cover;" class="me-2">
+                    <div>
+                        <p class="mb-0"><strong>${product.name}</strong></p>
+                        <p class="mb-0">Đơn giá: ${product.price.toLocaleString('vi-VN')}₫</p>
+                        <p class="mb-0">Số lượng: ${quantity}</p>
+                        <p class="mb-0">Tổng: ${itemTotal.toLocaleString('vi-VN')}₫</p>
+                    </div>
+                    </div>
+                </div>
+                `;
+
+                        orderSummaryHtml += `
+                <div class="d-flex justify-content-between mb-2">
+                    <span>${product.name} x ${quantity}</span>
+                    <span>${itemTotal.toLocaleString('vi-VN')}₫</span>
+                </div>
+                `;
+                    }
+                }
+
+                document.getElementById('paymentProductInfo').innerHTML = productInfoHtml;
+                document.getElementById('orderSummary').innerHTML = `
+            ${orderSummaryHtml}
+            <hr>
+            <div class="d-flex justify-content-between fw-bold">
+                <span>Tổng cộng:</span>
+                <span>${total.toLocaleString('vi-VN')}₫</span>
+            </div>
+        `;
+            } else if (source === 'buyNow') {
+                const product = JSON.parse(localStorage.getItem('currentBuyNowProduct'));
+                if (product) {
+                    const total = product.price * product.quantity;
+
+                    document.getElementById('paymentProductInfo').innerHTML = `
+            <div class="d-flex align-items-center">
+                <img src="${product.src}" alt="${product.name}" style="width:50px; height:50px; object-fit:cover;" class="me-2">
+                <div>
+                    <p class="mb-0"><strong>${product.name}</strong></p>
+                    <p class="mb-0">Số lượng: ${product.quantity}</p>
+                    <p class="mb-0">Đơn giá: ${product.price.toLocaleString('vi-VN')}₫</p>
+                    <p class="mb-0">Tổng: ${total.toLocaleString('vi-VN')}₫</p>
+                </div>
+            </div>
+            `;
+
+                    document.getElementById('orderSummary').innerHTML = `
+            <div class="d-flex justify-content-between mb-2">
+                <span>${product.name} x ${product.quantity}</span>
+                <span>${total.toLocaleString('vi-VN')}₫</span>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between fw-bold">
+                <span>Tổng cộng:</span>
+                <span>${total.toLocaleString('vi-VN')}₫</span>
+            </div>
+            `;
+                }
+            } else {
+                window.location.href = 'index.html';
+            }
+
+            document.getElementById('confirmInvoiceBtn').addEventListener('click', function() {
+                alert("Thanh toán thành công!");
+                window.location.href = 'index.html';
+            });
+
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let brand = this.getAttribute('data-brand');
+                    let sub = this.getAttribute('data-sub');
+                    filterProducts(brand, sub);
+                });
+            });
+
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const keyword = document.getElementById('searchInput').value.trim();
+                if (keyword) {
+                    localStorage.setItem('searchKeyword', keyword);
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

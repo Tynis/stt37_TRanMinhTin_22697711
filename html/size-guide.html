@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNISSHOES.VN - Hướng Dẫn Chọn Size Giày</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar fixed-top" style="background-color: #fff; border-bottom: 1px solid #ddd;">
+            <div class="container-fluid d-flex align-items-center justify-content-between py-1">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="goToHome(); return false;">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="../img/logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
+                            <span>TYNISSHOES.VN</span>
+                        </div>
+                    </div>
+                </a>
+                <form class="d-flex" id="searchForm" style="width: 35%;">
+                    <input class="form-control me-1" type="search" id="searchInput" placeholder="Mời gõ từ tìm..." aria-label="Search" style="border: 1px solid #ccc; font-size: 14px; height: 34px;">
+                    <button class="btn btn-outline-success" type="submit" style="font-size: 14px; padding: 4px 10px;">Tìm</button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-2">
+                        <i class="bi bi-headset me-1" style="font-size: 14px;"></i>
+                        <span style="font-size: 14px;">Hotline: 0908 408 828</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-secondary position-relative me-2" id="openCartBtn" style="padding: 4px 8px;">
+                        <i class="bi bi-cart" style="font-size: 14px;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount" style="font-size: 10px;">
+                                0
+                            </span>
+                    </a>
+                    <a href="login.html" class="nav-link" id="loginLink" style="font-size: 14px; padding: 0.25rem 0.5rem;">ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #212529;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" onclick="goToHome(); return false;">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="NIKE" href="#">NIKE</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="ADIDAS" href="#">ADIDAS</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="JORDAN" href="#">JORDAN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="YEEZY" href="#">YEEZY</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="GIÀY TENNIS/PICKLEBALL" href="#">SPORT</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="TENNIS" href="#">TENNIS</a></li>
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="PICKLEBALL" href="#">PICKLEBALL</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="OTHER BRAND" href="#">OTHER BRAND</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white" href="#">HƯỚNG DẪN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link" href="size-guide.html">Hướng dẫn chọn size giày</a></li>
+                                <li><a class="nav-link" href="warranty-policy.html">Chính sách bảo hành</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container my-5" style="min-height: 80vh;">
+        <h1 class="text-center mb-4">HƯỚNG DẪN CHỌN SIZE GIÀY</h1>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Cách đo size chân</h2>
+                        <p>Để chọn được đôi giày phù hợp, bạn cần đo chính xác kích thước bàn chân của mình. Dưới đây là hướng dẫn chi tiết:</p>
+
+                        <div class="row align-items-center mb-4">
+                            <div class="col-md-6">
+                                <h4>Bước 1: Chuẩn bị</h4>
+                                <ul>
+                                    <li>Một tờ giấy trắng (khổ A4)</li>
+                                    <li>Bút chì hoặc bút bi</li>
+                                    <li>Thước đo</li>
+                                </ul>
+                                <h4>Bước 2: Đo kích thước</h4>
+                                <ul>
+                                    <li>Đặt tờ giấy trên sàn phẳng, dựa vào tường</li>
+                                    <li>Đứng thẳng trên tờ giấy, gót chân chạm tường</li>
+                                    <li>Dùng bút đánh dấu điểm xa nhất của ngón chân</li>
+                                    <li>Đo khoảng cách từ cạnh giấy (phía tường) đến dấu bút</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../img/foot-measure.jpg" alt="Cách đo size chân" class="img-fluid rounded">
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <strong>Lưu ý:</strong> Nên đo vào cuối ngày khi chân đã giãn ra hoàn toàn. Nếu hai chân có kích thước khác nhau, hãy chọn size theo chân lớn hơn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Bảng quy đổi size giày</h2>
+                        <p>Dưới đây là bảng quy đổi size giày giữa các hệ thống đo lường khác nhau:</p>
+
+                        <h4 class="mt-4">Size giày Nam</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>US</th>
+                                        <th>UK</th>
+                                        <th>EU</th>
+                                        <th>CM</th>
+                                        <th>Việt Nam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>6</td>
+                                        <td>40</td>
+                                        <td>25</td>
+                                        <td>40</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.5</td>
+                                        <td>6.5</td>
+                                        <td>40.5</td>
+                                        <td>25.5</td>
+                                        <td>40-41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>7</td>
+                                        <td>41</td>
+                                        <td>26</td>
+                                        <td>41</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.5</td>
+                                        <td>7.5</td>
+                                        <td>42</td>
+                                        <td>26.5</td>
+                                        <td>41-42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>8</td>
+                                        <td>42.5</td>
+                                        <td>27</td>
+                                        <td>42</td>
+                                    </tr>
+                                    <tr>
+                                        <td>9.5</td>
+                                        <td>8.5</td>
+                                        <td>43</td>
+                                        <td>27.5</td>
+                                        <td>42-43</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>9</td>
+                                        <td>44</td>
+                                        <td>28</td>
+                                        <td>43</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10.5</td>
+                                        <td>9.5</td>
+                                        <td>44.5</td>
+                                        <td>28.5</td>
+                                        <td>43-44</td>
+                                    </tr>
+                                    <tr>
+                                        <td>11</td>
+                                        <td>10</td>
+                                        <td>45</td>
+                                        <td>29</td>
+                                        <td>44</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h4 class="mt-4">Size giày Nữ</h4>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>US</th>
+                                        <th>UK</th>
+                                        <th>EU</th>
+                                        <th>CM</th>
+                                        <th>Việt Nam</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>3</td>
+                                        <td>35.5</td>
+                                        <td>22</td>
+                                        <td>35</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5.5</td>
+                                        <td>3.5</td>
+                                        <td>36</td>
+                                        <td>22.5</td>
+                                        <td>35-36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>4</td>
+                                        <td>36.5</td>
+                                        <td>23</td>
+                                        <td>36</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6.5</td>
+                                        <td>4.5</td>
+                                        <td>37.5</td>
+                                        <td>23.5</td>
+                                        <td>36-37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>5</td>
+                                        <td>38</td>
+                                        <td>24</td>
+                                        <td>37</td>
+                                    </tr>
+                                    <tr>
+                                        <td>7.5</td>
+                                        <td>5.5</td>
+                                        <td>38.5</td>
+                                        <td>24.5</td>
+                                        <td>37-38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>6</td>
+                                        <td>39</td>
+                                        <td>25</td>
+                                        <td>38</td>
+                                    </tr>
+                                    <tr>
+                                        <td>8.5</td>
+                                        <td>6.5</td>
+                                        <td>40</td>
+                                        <td>25.5</td>
+                                        <td>38-39</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Hướng dẫn chọn size theo từng thương hiệu</h2>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header bg-dark text-white">
+                                        <h4 class="mb-0">NIKE</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="../img/nike-size.jpg" alt="Bảng size Nike" class="img-fluid mb-3 rounded">
+                                        <p><strong>Lưu ý:</strong> Giày Nike thường có form hơi nhỏ, nên chọn tăng 0.5 size so với bình thường.</p>
+                                        <p>Các dòng giày khác nhau có thể có form khác nhau:</p>
+                                        <ul>
+                                            <li>Air Force 1: True to size hoặc down 0.5 size</li>
+                                            <li>Air Jordan 1: True to size</li>
+                                            <li>Air Max: True to size hoặc up 0.5 size</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header bg-dark text-white">
+                                        <h4 class="mb-0">ADIDAS</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="../img/adidas-size.jpg" alt="Bảng size Adidas" class="img-fluid mb-3 rounded">
+                                        <p><strong>Lưu ý:</strong> Giày Adidas thường có form chuẩn, nên chọn đúng size chân.</p>
+                                        <p>Các dòng giày khác nhau có thể có form khác nhau:</p>
+                                        <ul>
+                                            <li>Ultraboost: True to size hoặc up 0.5 size</li>
+                                            <li>Stan Smith: True to size</li>
+                                            <li>NMD: Down 0.5 size</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header bg-dark text-white">
+                                        <h4 class="mb-0">JORDAN</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="../img/jordan-size.jpg" alt="Bảng size Jordan" class="img-fluid mb-3 rounded">
+                                        <p><strong>Lưu ý:</strong> Giày Jordan thường có form chuẩn, nên chọn đúng size chân.</p>
+                                        <p>Các dòng giày khác nhau có thể có form khác nhau:</p>
+                                        <ul>
+                                            <li>Air Jordan 1: True to size</li>
+                                            <li>Air Jordan 4: True to size</li>
+                                            <li>Air Jordan 11: True to size hoặc up 0.5 size</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card mb-4">
+                                    <div class="card-header bg-dark text-white">
+                                        <h4 class="mb-0">YEEZY</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <img src="../img/yeezy-size.jpg" alt="Bảng size Yeezy" class="img-fluid mb-3 rounded">
+                                        <p><strong>Lưu ý:</strong> Giày Yeezy thường có form nhỏ, nên chọn tăng 0.5-1 size so với bình thường.</p>
+                                        <p>Các dòng giày khác nhau có thể có form khác nhau:</p>
+                                        <ul>
+                                            <li>Yeezy 350 V2: Up 0.5 size</li>
+                                            <li>Yeezy 500: True to size</li>
+                                            <li>Yeezy 700: True to size hoặc up 0.5 size</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Mẹo chọn size giày phù hợp</h2>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Dấu hiệu giày vừa vặn</h4>
+                                <ul>
+                                    <li>Khoảng trống 0.5-1cm từ ngón chân dài nhất đến mũi giày</li>
+                                    <li>Không bị chật ở phần mu bàn chân</li>
+                                    <li>Gót chân không bị xê dịch khi di chuyển</li>
+                                    <li>Không cảm thấy đau hoặc khó chịu khi đi</li>
+                                </ul>
+
+                                <h4 class="mt-4">Dấu hiệu giày quá nhỏ</h4>
+                                <ul>
+                                    <li>Ngón chân chạm vào mũi giày</li>
+                                    <li>Cảm thấy tê hoặc đau ở ngón chân</li>
+                                    <li>Khó khăn khi xỏ chân vào giày</li>
+                                    <li>Phần mu bàn chân bị ép chặt</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4>Dấu hiệu giày quá rộng</h4>
+                                <ul>
+                                    <li>Gót chân bị xê dịch nhiều khi đi</li>
+                                    <li>Khoảng trống quá lớn ở mũi giày</li>
+                                    <li>Bàn chân trượt về phía trước khi đi</li>
+                                    <li>Dễ bị phồng rộp do ma sát</li>
+                                </ul>
+
+                                <h4 class="mt-4">Thời điểm tốt nhất để đo chân</h4>
+                                <ul>
+                                    <li>Vào cuối ngày khi chân đã giãn ra hoàn toàn</li>
+                                    <li>Đo cả hai chân và chọn size theo chân lớn hơn</li>
+                                    <li>Đo khi đang đứng, không ngồi</li>
+                                    <li>Đo khi đang mang tất mà bạn thường dùng với giày</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-warning mt-4">
+                            <strong>Lưu ý quan trọng:</strong> Mỗi thương hiệu và mỗi dòng giày có thể có form khác nhau. Bảng size chỉ mang tính tham khảo. Nếu có thể, hãy thử giày trực tiếp trước khi mua.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 TYNISSHOES.VN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLoginStatus();
+            updateCartCount();
+
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let brand = this.getAttribute('data-brand');
+                    let sub = this.getAttribute('data-sub');
+                    filterProducts(brand, sub);
+                });
+            });
+
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const keyword = document.getElementById('searchInput').value.trim();
+                if (keyword) {
+                    localStorage.setItem('searchKeyword', keyword);
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

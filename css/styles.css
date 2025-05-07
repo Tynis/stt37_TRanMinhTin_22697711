@@ -1,0 +1,229 @@
+.product-card {
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.product-card img {
+    height: 180px;
+    object-fit: cover;
+}
+
+body {
+    padding-top: 70px;
+}
+
+#cartSection {
+    min-height: 90vh;
+}
+
+.navbar .nav-item:hover {
+    background-color: rgba(252, 159, 78, 0.811);
+    border-radius: 30px;
+}
+
+.navbar-nav .nav-link.active {
+    background-color: rgba(252, 159, 78, 0.811);
+    border-radius: 30px;
+}
+
+.nav-item.has-submenu {
+    position: relative;
+}
+
+.nav-item.has-submenu .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    list-style: none;
+    z-index: 999;
+    min-width: 100px;
+    max-width: 250px;
+    /* Tăng chiều rộng submenu */
+    border-radius: 6px;
+}
+
+.nav-item.has-submenu:hover .submenu {
+    display: block;
+}
+
+.nav-item.has-submenu .submenu li a {
+    padding: 0.25rem 1rem;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    /* Ngăn văn bản ngắt dòng */
+}
+
+.nav-item.has-submenu .submenu li a:hover {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+#carouselExampleIndicators {
+    margin-top: 60px;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+    height: 150px;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: 50%;
+}
+
+.navbar-nav {
+    margin-top: 50px;
+}
+
+#searchForm {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+#openCartBtn {
+    margin-top: 5px;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    position: fixed;
+    top: 20px;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-link.text-white:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+}
+
+#loginLink {
+    padding: 0.5rem 1rem;
+    color: #333;
+    text-decoration: none;
+}
+
+#loginLink:hover {
+    background-color: rgba(252, 159, 78, 0.811);
+    border-radius: 30px;
+}
+
+.top-bar .d-flex {
+    gap: 10px;
+}
+
+
+/* Modal Styles */
+
+.modal-content {
+    margin-top: 10px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 400px;
+    max-width: 90%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-check {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+.btn:hover {
+    background-color: #555;
+}
+
+.text-danger {
+    color: red;
+    margin-top: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-muted {
+    color: #666;
+    text-decoration: none;
+}
+
+
+/* User Container Styles */
+
+.user-container {
+    position: relative;
+    display: inline-block;
+}
+
+.logout-btn {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1px;
+    cursor: pointer;
+}
+
+.user-container:hover .logout-btn {
+    display: block;
+}

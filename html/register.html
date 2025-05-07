@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNISSHOES.VN - Đăng Ký</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar fixed-top" style="background-color: #fff; border-bottom: 1px solid #ddd;">
+            <div class="container-fluid d-flex align-items-center justify-content-between py-1">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="goToHome(); return false;">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="../img/logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
+                            <span>TYNISSHOES.VN</span>
+                        </div>
+                    </div>
+                </a>
+                <form class="d-flex" id="searchForm" style="width: 35%;">
+                    <input class="form-control me-1" type="search" id="searchInput" placeholder="Mời gõ từ tìm..." aria-label="Search" style="border: 1px solid #ccc; font-size: 14px; height: 34px;">
+                    <button class="btn btn-outline-success" type="submit" style="font-size: 14px; padding: 4px 10px;">Tìm</button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-2">
+                        <i class="bi bi-headset me-1" style="font-size: 14px;"></i>
+                        <span style="font-size: 14px;">Hotline: 0908 408 828</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-secondary position-relative me-2" id="openCartBtn" style="padding: 4px 8px;">
+                        <i class="bi bi-cart" style="font-size: 14px;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount" style="font-size: 10px;">
+                                0
+                            </span>
+                    </a>
+                    <a href="login.html" class="nav-link" id="loginLink" style="font-size: 14px; padding: 0.25rem 0.5rem;">ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #212529;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" onclick="goToHome(); return false;">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="NIKE" href="#">NIKE</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="ADIDAS" href="#">ADIDAS</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="JORDAN" href="#">JORDAN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="YEEZY" href="#">YEEZY</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="GIÀY TENNIS/PICKLEBALL" href="#">SPORT</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="TENNIS" href="#">TENNIS</a></li>
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="PICKLEBALL" href="#">PICKLEBALL</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="OTHER BRAND" href="#">OTHER BRAND</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white" href="#">HƯỚNG DẪN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link" href="size-guide.html">Hướng dẫn chọn size giày</a></li>
+                                <li><a class="nav-link" href="warranty-policy.html">Chính sách bảo hành</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container" style="min-height: 90vh; display: flex; align-items: center; justify-content: center; margin-top: 50px;">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title text-center">ĐĂNG KÝ TÀI KHOẢN</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="registerForm">
+                            <div class="mb-3">
+                                <label for="registerUsername" class="form-label">Tên tài khoản *</label>
+                                <input type="text" class="form-control" id="registerUsername" required>
+                                <small class="form-text text-muted">Tên đăng nhập phải có ít nhất 3 ký tự và không chứa ký tự đặc biệt.</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="registerPassword" class="form-label">Mật khẩu *</label>
+                                <input type="password" class="form-control" id="registerPassword" required>
+                                <small class="form-text text-muted">Mật khẩu phải có đúng 6 chữ số.</small>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Nhập lại mật khẩu *</label>
+                                <input type="password" class="form-control" id="confirmPassword" required>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" id="registerButton" onclick="handleRegister()">ĐĂNG KÝ</button>
+                            <div class="mt-2 text-center">
+                                <span class="text-muted">Đã có tài khoản? </span>
+                                <a href="login.html" class="text-primary">Đăng nhập ngay</a>
+                            </div>
+                        </form>
+                        <div id="registerErrorMessage" class="text-danger mt-2" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 TYNISSHOES.VN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLoginStatus();
+            updateCartCount();
+
+            // Check if already logged in
+            const username = sessionStorage.getItem('username') || localStorage.getItem('username');
+            if (username) {
+                window.location.href = 'index.html';
+            }
+
+            document.getElementById('registerForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                handleRegister();
+            });
+
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let brand = this.getAttribute('data-brand');
+                    let sub = this.getAttribute('data-sub');
+                    filterProducts(brand, sub);
+                });
+            });
+
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const keyword = document.getElementById('searchInput').value.trim();
+                if (keyword) {
+                    localStorage.setItem('searchKeyword', keyword);
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

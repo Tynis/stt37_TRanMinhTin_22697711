@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TYNISSHOES.VN - Chính Sách Bảo Hành</title>
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/scripts.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="top-bar fixed-top" style="background-color: #fff; border-bottom: 1px solid #ddd;">
+            <div class="container-fluid d-flex align-items-center justify-content-between py-1">
+                <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="goToHome(); return false;">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="../img/logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
+                            <span>TYNISSHOES.VN</span>
+                        </div>
+                    </div>
+                </a>
+                <form class="d-flex" id="searchForm" style="width: 35%;">
+                    <input class="form-control me-1" type="search" id="searchInput" placeholder="Mời gõ từ tìm..." aria-label="Search" style="border: 1px solid #ccc; font-size: 14px; height: 34px;">
+                    <button class="btn btn-outline-success" type="submit" style="font-size: 14px; padding: 4px 10px;">Tìm</button>
+                </form>
+                <div class="d-flex align-items-center">
+                    <div class="d-flex align-items-center me-2">
+                        <i class="bi bi-headset me-1" style="font-size: 14px;"></i>
+                        <span style="font-size: 14px;">Hotline: 0908 408 828</span>
+                    </div>
+                    <a href="cart.html" class="btn btn-secondary position-relative me-2" id="openCartBtn" style="padding: 4px 8px;">
+                        <i class="bi bi-cart" style="font-size: 14px;"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount" style="font-size: 10px;">
+                                0
+                            </span>
+                    </a>
+                    <a href="login.html" class="nav-link" id="loginLink" style="font-size: 14px; padding: 0.25rem 0.5rem;">ĐĂNG NHẬP</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg" style="background-color: #212529;">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" onclick="goToHome(); return false;">TRANG CHỦ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">GIỚI THIỆU</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="NIKE" href="#">NIKE</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="NIKE" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="ADIDAS" href="#">ADIDAS</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="ADIDAS" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="JORDAN" href="#">JORDAN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NAM" href="#">Nam</a></li>
+                                <li><a class="nav-link category-link" data-brand="JORDAN" data-sub="NU" href="#">Nữ</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="YEEZY" href="#">YEEZY</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white category-link" data-brand="GIÀY TENNIS/PICKLEBALL" href="#">SPORT</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="TENNIS" href="#">TENNIS</a></li>
+                                <li><a class="nav-link category-link" data-brand="GIÀY TENNIS/PICKLEBALL" data-sub="PICKLEBALL" href="#">PICKLEBALL</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white category-link" data-brand="OTHER BRAND" href="#">OTHER BRAND</a>
+                        </li>
+                        <li class="nav-item has-submenu">
+                            <a class="nav-link text-white" href="#">HƯỚNG DẪN</a>
+                            <ul class="submenu">
+                                <li><a class="nav-link" href="size-guide.html">Hướng dẫn chọn size giày</a></li>
+                                <li><a class="nav-link" href="warranty-policy.html">Chính sách bảo hành</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="container my-5" style="min-height: 80vh;">
+        <h1 class="text-center mb-4">CHÍNH SÁCH BẢO HÀNH</h1>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Điều kiện bảo hành</h2>
+
+                        <div class="alert alert-info">
+                            <p class="mb-0">TYNISSHOES.VN cam kết bảo hành cho tất cả sản phẩm được mua trực tiếp tại cửa hàng hoặc qua website chính thức của chúng tôi.</p>
+                        </div>
+
+                        <h4 class="mt-4">Thời gian bảo hành</h4>
+                        <ul>
+                            <li>Giày thể thao: 30 ngày kể từ ngày mua</li>
+                            <li>Giày da: 60 ngày kể từ ngày mua</li>
+                            <li>Phụ kiện: 15 ngày kể từ ngày mua</li>
+                        </ul>
+
+                        <h4 class="mt-4">Phạm vi bảo hành</h4>
+                        <p>Chúng tôi bảo hành các lỗi sau đây:</p>
+                        <ul>
+                            <li>Lỗi bong keo, đứt chỉ trong quá trình sử dụng bình thường</li>
+                            <li>Lỗi về đế giày (nứt, gãy) trong điều kiện sử dụng thông thường</li>
+                            <li>Các lỗi về chất lượng sản phẩm do nhà sản xuất</li>
+                        </ul>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <img src="../img/warranty-1.jpg" alt="Bảo hành giày" class="img-fluid rounded">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../img/warranty-2.jpg" alt="Bảo hành giày" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Trường hợp không được bảo hành</h2>
+
+                        <p>Chúng tôi không bảo hành trong các trường hợp sau:</p>
+                        <ul>
+                            <li>Sản phẩm đã quá thời hạn bảo hành</li>
+                            <li>Sản phẩm không có hóa đơn mua hàng hoặc phiếu bảo hành</li>
+                            <li>Sản phẩm bị hư hỏng do sử dụng không đúng cách:
+                                <ul>
+                                    <li>Giặt giày bằng máy giặt</li>
+                                    <li>Phơi giày trực tiếp dưới ánh nắng mặt trời</li>
+                                    <li>Sử dụng giày không đúng mục đích (ví dụ: sử dụng giày thời trang để chơi thể thao chuyên nghiệp)</li>
+                                </ul>
+                            </li>
+                            <li>Sản phẩm bị hư hỏng do tai nạn, va đập mạnh</li>
+                            <li>Sản phẩm bị hao mòn tự nhiên trong quá trình sử dụng:
+                                <ul>
+                                    <li>Đế giày bị mòn</li>
+                                    <li>Màu sắc bị phai</li>
+                                    <li>Lót giày bị mòn</li>
+                                </ul>
+                            </li>
+                            <li>Sản phẩm đã được sửa chữa tại những nơi không được ủy quyền bởi TYNISSHOES.VN</li>
+                        </ul>
+
+                        <div class="alert alert-warning mt-4">
+                            <p class="mb-0"><strong>Lưu ý:</strong> Việc xác định lỗi thuộc diện bảo hành hay không sẽ do nhân viên kỹ thuật của TYNISSHOES.VN quyết định.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Quy trình bảo hành</h2>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <h4>Bước 1: Kiểm tra điều kiện bảo hành</h4>
+                                <p>Khách hàng cần chuẩn bị:</p>
+                                <ul>
+                                    <li>Sản phẩm cần bảo hành</li>
+                                    <li>Hóa đơn mua hàng hoặc phiếu bảo hành</li>
+                                    <li>Thông tin liên hệ</li>
+                                </ul>
+
+                                <h4 class="mt-3">Bước 2: Gửi yêu cầu bảo hành</h4>
+                                <p>Khách hàng có thể lựa chọn một trong các hình thức sau:</p>
+                                <ul>
+                                    <li>Mang sản phẩm trực tiếp đến cửa hàng TYNISSHOES.VN</li>
+                                    <li>Gửi yêu cầu bảo hành qua email: support@tynisshoes.vn</li>
+                                    <li>Gọi điện đến hotline: 0908 408 828</li>
+                                </ul>
+
+                                <h4 class="mt-3">Bước 3: Tiếp nhận và xử lý</h4>
+                                <p>Nhân viên kỹ thuật sẽ kiểm tra và xác định lỗi sản phẩm:</p>
+                                <ul>
+                                    <li>Thời gian kiểm tra: 1-3 ngày làm việc</li>
+                                    <li>Thời gian bảo hành: 7-15 ngày làm việc tùy theo mức độ hư hỏng</li>
+                                </ul>
+
+                                <h4 class="mt-3">Bước 4: Trả sản phẩm</h4>
+                                <p>Sau khi hoàn tất bảo hành, chúng tôi sẽ liên hệ để khách hàng nhận lại sản phẩm.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="../img/warranty-process.jpg" alt="Quy trình bảo hành" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="card-title">Chính sách đổi trả</h2>
+
+                        <h4 class="mt-3">Điều kiện đổi trả</h4>
+                        <ul>
+                            <li>Thời gian đổi trả: trong vòng 7 ngày kể từ ngày mua</li>
+                            <li>Sản phẩm còn nguyên tem, nhãn, hộp</li>
+                            <li>Sản phẩm chưa qua sử dụng, còn mới 100%</li>
+                            <li>Có hóa đơn mua hàng</li>
+                        </ul>
+
+                        <h4 class="mt-3">Quy định đổi trả</h4>
+                        <ul>
+                            <li>Đổi size: miễn phí nếu sản phẩm còn size cần đổi</li>
+                            <li>Đổi mẫu: chỉ đổi sang sản phẩm có giá trị bằng hoặc cao hơn (khách hàng thanh toán phần chênh lệch)</li>
+                            <li>Trả hàng: hoàn tiền 100% nếu sản phẩm có lỗi từ nhà sản xuất</li>
+                            <li>Trường hợp trả hàng do không ưng ý: hoàn tiền 90% giá trị sản phẩm</li>
+                        </ul>
+
+                        <div class="alert alert-danger mt-4">
+                            <p class="mb-0"><strong>Lưu ý:</strong> Chúng tôi không chấp nhận đổi trả đối với sản phẩm đã qua sử dụng, đã giặt, bị bẩn, bị hư hỏng do lỗi của khách hàng.</p>
+                        </div>
+
+                        <h4 class="mt-4">Liên hệ hỗ trợ</h4>
+                        <p>Nếu quý khách có bất kỳ thắc mắc nào về chính sách bảo hành và đổi trả, vui lòng liên hệ:</p>
+                        <ul>
+                            <li>Hotline: 0908 408 828</li>
+                            <li>Email: support@tynisshoes.vn</li>
+                            <li>Địa chỉ: 12 nguyenvanbao - P5 - Gò Vấp - TPHCM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2025 TYNISSHOES.VN. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            updateLoginStatus();
+            updateCartCount();
+
+            document.querySelectorAll('.category-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    let brand = this.getAttribute('data-brand');
+                    let sub = this.getAttribute('data-sub');
+                    filterProducts(brand, sub);
+                });
+            });
+
+            document.getElementById('searchForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const keyword = document.getElementById('searchInput').value.trim();
+                if (keyword) {
+                    localStorage.setItem('searchKeyword', keyword);
+                    window.location.href = 'index.html';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
