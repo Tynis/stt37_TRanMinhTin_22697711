@@ -4,15 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TYNISSHOES.VN - Giỏ Hàng</title>
-    <link rel="icon" type="image/png" href="../img/logo.png">
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link href="../css/styles.css" rel="stylesheet">
-    <script src="../js/jquery-3.7.1.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap.bundle.js"></script>
-    <script src="../js/scripts.js"></script>
+    <title>TYNISSHOES.VN - Đăng Nhập</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.js"></script>
+    <script src="scripts.js"></script>
 </head>
 
 <body>
@@ -22,7 +21,7 @@
                 <a class="navbar-brand fw-bold d-flex align-items-center" href="#" onclick="goToHome(); return false;">
                     <div class="d-flex flex-column align-items-center">
                         <div class="d-flex align-items-center">
-                            <img src="../img/logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
+                            <img src="logo.png" alt="Logo" style="height: 50px; margin-right: 5px;">
                             <span>TYNISSHOES.VN</span>
                         </div>
                     </div>
@@ -34,7 +33,7 @@
                 <div class="d-flex align-items-center">
                     <div class="d-flex align-items-center me-2">
                         <i class="bi bi-headset me-1" style="font-size: 14px;"></i>
-                        <span style="font-size: 14px;">Hotline: 0123 654 789</span>
+                        <span style="font-size: 14px;">Hotline: 0908 408 828</span>
                     </div>
                     <a href="cart.html" class="btn btn-secondary position-relative me-2" id="openCartBtn" style="padding: 4px 8px;">
                         <i class="bi bi-cart" style="font-size: 14px;"></i>
@@ -107,16 +106,43 @@
         </nav>
     </header>
 
-    <section id="cartSection" class="container my-5">
-        <h2 class="mb-4">GIỎ HÀNG</h2>
-        <button id="closeCartBtn" class="btn btn-sm btn-outline-danger mb-3">Đóng</button>
-        <ul id="cartItems" class="list-group mb-3">
-        </ul>
-        <div class="fw-bold text-end fs-5 mb-3">
-            Tổng tiền: <span id="cartTotal">0₫</span>
+    <div class="container" style="min-height: 90vh; display: flex; align-items: center; justify-content: center; margin-top: 50px;">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title text-center">ĐĂNG NHẬP</h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="loginForm">
+                            <div class="mb-3">
+                                <label for="username" class="form-label">Tên tài khoản hoặc địa chỉ email *</label>
+                                <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Mật khẩu *</label>
+                                <input type="password" class="form-control" id="password" required>
+                                <small class="form-text text-muted">Mật khẩu phải có đúng 6 chữ số.</small>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe">Ghi nhớ mật khẩu</label>
+                            </div>
+                            <button type="button" class="btn btn-primary w-100" id="loginButton" onclick="handleLogin()">ĐĂNG NHẬP</button>
+                            <div class="mt-2 text-center">
+                                <a href="#" onclick="goToForgotPassword(); return false;" class="text-muted me-3">Quên mật khẩu?</a>
+                                <a href="register.html" class="text-primary">Đăng ký tài khoản</a>
+                            </div>
+                        </form>
+                        <div id="errorMessage" class="text-danger mt-2" style="display: none;"></div>
+                        <div id="redirectMessage" class="alert alert-info mt-3" style="display: none;">
+                            Bạn cần đăng nhập để tiếp tục mua hàng. Sau khi đăng nhập, bạn sẽ được chuyển hướng về trang sản phẩm.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <button class="btn btn-primary" id="checkoutBtn">Thanh Toán</button>
-    </section>
+    </div>
 
     <footer class="bg-dark text-white text-center py-3">
         <div class="container">
@@ -126,24 +152,32 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Make sure we have the latest cart data
-            cart = JSON.parse(localStorage.getItem('cart')) || [];
-
             updateLoginStatus();
             updateCartCount();
-            renderCart();
 
-            document.getElementById('closeCartBtn').addEventListener('click', function() {
-                window.location.href = 'index.html';
-            });
-
-            document.getElementById('checkoutBtn').addEventListener('click', function() {
-                if (cart.length === 0) {
-                    alert('Giỏ hàng của bạn đang trống!');
-                    return;
+            // Check if already logged in
+            const username = sessionStorage.getItem('username') || localStorage.getItem('username');
+            if (username) {
+                // If there's a redirect parameter, go there after login
+                const urlParams = new URLSearchParams(window.location.search);
+                const redirect = urlParams.get('redirect');
+                if (redirect) {
+                    window.location.href = redirect;
+                } else {
+                    window.location.href = 'index.html';
                 }
+            }
 
-                window.location.href = 'checkout.html?source=cart';
+            // Show redirect message if coming from a product page
+            const urlParams = new URLSearchParams(window.location.search);
+            const redirect = urlParams.get('redirect');
+            if (redirect) {
+                document.getElementById('redirectMessage').style.display = 'block';
+            }
+
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                handleLogin();
             });
 
             document.querySelectorAll('.category-link').forEach(link => {
